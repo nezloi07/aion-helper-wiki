@@ -1984,6 +1984,34 @@ ul,ol{padding-left:22px}li{margin:3px 0}
 <h3>Q: The character is not behaving correctly around the final boss. Is there an update note about this?</h3>
 <p>A: An update announcement mentioned improvements to dodging the final boss's whirlwind, interrupting its "number 8" ultimate skill, and timing revives so they do not occur during that ultimate. It also mentioned a fix for floor-gold farming during the queue.</p>
 <p><em>(This is a summary of the announced changes, not a guarantee that every encounter issue is resolved.)</em></p>
+<h2>CAPTCHA recognition: troubleshooting</h2>
+<h3>Troubleshooting order</h3>
+<ol>
+<li>
+<p><strong>Confirm the Control Center is running.</strong>
+   Only the Control Center processes CAPTCHAs. A game client with the in-game helper alone will not solve them.</p>
+</li>
+<li>
+<p><strong>Accelerate the Control Center, not the game.</strong>
+   Route the Control Center through an accelerator. Xunyou (迅游) in routing mode (路由模式) is the setting reported to fix the "digits instead of letters" and "solver connection failed" cases. Accelerating the game client does not help — the traffic that matters belongs to the Control Center.</p>
+</li>
+<li>
+<p><strong>Check reachability of the Hong Kong, Japan and Singapore nodes.</strong>
+   If these are blocked, the CAPTCHA image never reaches the solver and no solution can return.</p>
+</li>
+<li>
+<p><strong>Increase the game window resolution.</strong>
+   At low resolution the captured CAPTCHA image is unusable, and recognition fails even with a working solver connection.</p>
+</li>
+<li>
+<p><strong>Check the hosts file.</strong>
+   Pirated or repacked updaters write domain blocks into Windows. Delete <code>C:\Windows\System32\drivers\etc\hosts</code>, then reopen Aion Updater.</p>
+</li>
+</ol>
+<h3>Warning</h3>
+<blockquote>
+<p>Machines that have run pirated builds are <strong>hardware-banned</strong> from all aion.onl products. Buying a legitimate key afterwards does not lift the ban, and the affected key is banned as well.</p>
+</blockquote>
 <h2>Gear upgrading and Kinah spending</h2>
 <h3>Q: How do I stop the helper from automatically upgrading my items?</h3>
 <p>A: There is a toggle for auto-enhance, and a gear-score cap you set yourself. Both are in the control panel (central console). The developer's own wording: <em>"The auto-enhance feature includes a toggle switch. You can configure it to stop enhancing once it reaches level 1100. If you want to earn money quickly, you can adjust these settings in the central console."</em></p>

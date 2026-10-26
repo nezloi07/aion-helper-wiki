@@ -1785,6 +1785,21 @@ li { margin: var(--s2) 0; }
 <p>Two things worth knowing. First, the official position is that you should just use the default — the custom slot is a workaround, not a supported feature. Second, there is only one custom slot, the right button; people have asked for one or two extra keybinds, but nothing has been confirmed.</p>
 <p>An <b>empty right slot is the most common cause of the bot standing still and doing nothing</b> — that is the first thing to check when auto-combat looks broken.</p>
 <p>Do not confuse this with skill-point allocation. That is also automatic, from a per-class template, and cannot be edited by hand. For that, the developer offered a different route: send an account with manually allocated points, and he will take a snapshot and use it as the template for that class. That concerns skill points, not cast order.</p>
+
+
+<h2>Manual stigma setup — interrupt requirement</h2>
+
+<p>By default the AI levels and slots stigmas itself. If you set stigmas up by hand, the 26 October update requires two things — otherwise the AI treats the setup as invalid and <b>resets it automatically</b>:</p>
+<ol>
+<li><b>The first stigma slot must be active</b> (a stigma registered in it).</li>
+<li><b>At least one of your stigmas must be an interrupt skill.</b></li>
+</ol>
+
+<p><b>What is an interrupt skill:</b> a skill that breaks an enemy's cast. In-game, check the stigma tooltip and its specializations for stun, knockdown or interrupt effects (in Draupnir these are the skills that drain the boss's stagger gauge). Exact skill names differ per class.</p>
+
+<p><b>If your stigmas keep resetting:</b> check these two conditions first — before 26 October a bug caused constant resets, now a reset means the manual setup is missing one of them.</p>
+
+
 <div class="quick"><b>Quick links:</b> <a href="https://unicom.market/product/aion-2-software-hlp/" target="_blank">🛒 Buy a card</a> · <a href="https://discord.gg/yYbzkcqsp2" target="_blank">💬 Discord</a> · <a href="https://www.aion.onl/download/Aion2.Updater.zip?v=8b58dc7b7301ca67d0cce0e3518488ea" target="_blank">⬇️ Download</a> · <a href="https://www.youtube.com/watch?v=TTUGEMEy2bE" target="_blank" rel="noopener">🎬 Video guide</a> · 🛠 <b>Problems? Contact U.Tools</b> · <a class="tocopen" href="#home">📚 Table of contents</a></div></section>
 <section class="page" id="patrol-monster"><h1><span class="pic">⌖</span> trol points decide where your character moves back and forth to find monsters, and the monster filter decides which monsters to attack. Click “Smart Plan” and the helper finds a spot with lots of monsters nearby and builds the route for you.</h1><a class="back tocopen" href="#home">← Table of contents</a><h2>Where to find it</h2>
 <ol>
@@ -2511,7 +2526,7 @@ li { margin: var(--s2) 0; }
 <ul>
 <li><strong>Draupnir dungeon flow optimized</strong> — smoother run progression.</li>
 <li><strong>Control Center fixes</strong> — resolved several reported issues.</li>
-<li><strong>Stigma reset loop fixed</strong> — if you manually assign stigmas, the first slot MUST include an interrupt skill, or the AI will keep resetting them.</li>
+<li><strong>Stigma reset loop fixed</strong> — if you set stigmas manually, activate the first stigma slot and include at least one interrupt skill, otherwise the AI resets them (<a href="#auto-combat">details</a>).</li>
 <li><strong>⚠ Multi-account users:</strong> enable the <strong>one account per IP</strong> option in Control Center settings to significantly reduce ban risk.</li>
 </ul>
 <p>Update: open the Updater, it pulls the latest build automatically.</p>

@@ -1787,18 +1787,15 @@ li { margin: var(--s2) 0; }
 <p>Do not confuse this with skill-point allocation. That is also automatic, from a per-class template, and cannot be edited by hand. For that, the developer offered a different route: send an account with manually allocated points, and he will take a snapshot and use it as the template for that class. That concerns skill points, not cast order.</p>
 
 
-<h2>Manual stigma setup — interrupt requirement</h2>
+<h2>Stigmas and interrupt skills</h2>
 
-<p>By default the AI levels and slots stigmas itself. If you set stigmas up by hand, the 26 October update requires two things — otherwise the AI treats the setup as invalid and <b>resets it automatically</b>:</p>
-<ol>
-<li><b>The first stigma slot must be active</b> (a stigma registered in it).</li>
-<li><b>At least one of your stigmas must be an interrupt skill.</b></li>
-</ol>
+<p>Stigmas are learned and slotted automatically from your per-class build plan. The helper re-checks them at one moment only: <b>when queuing for Krao Cave</b> — for the host and for every party member. If none of the slotted stigmas carries an interrupt effect, all stigmas are reset and re-learned from the build plan so that an interrupt is available for the boss. That reset is free and leaves Specialty untouched. Outside Krao queueing, stigmas are never reset.</p>
 
-<p><b>What is an interrupt skill:</b> a skill that breaks an enemy's cast. In-game, check the stigma tooltip and its specializations for stun, knockdown or interrupt effects (in Draupnir these are the skills that drain the boss's stagger gauge). Exact skill names differ per class.</p>
+<p><b>What counts as an interrupt:</b> a skill that breaks the enemy's cast. In Draupnir and Krao Cave these are the skills that drain the boss's stagger gauge — stuns, knockdowns and similar effects. Exact names differ per class.</p>
 
-<p><b>If your stigmas keep resetting:</b> check these two conditions first — before 26 October a bug caused constant resets, now a reset means the manual setup is missing one of them.</p>
+<p><b>If you slot stigmas by hand:</b> activate a stigma in the first slot and keep at least one interrupt stigma in the loadout. Otherwise the next Krao queue will consider the setup incomplete and rebuild it for you.</p>
 
+<p><b>If your stigmas keep resetting:</b> check whether you have an interrupt slotted. Since the 26–27 October builds a reset means an interrupt is missing, not that the client is stuck.</p>
 
 <div class="quick"><b>Quick links:</b> <a href="https://unicom.market/product/aion-2-software-hlp/" target="_blank">🛒 Buy a card</a> · <a href="https://discord.gg/yYbzkcqsp2" target="_blank">💬 Discord</a> · <a href="https://www.aion.onl/download/Aion2.Updater.zip?v=8b58dc7b7301ca67d0cce0e3518488ea" target="_blank">⬇️ Download</a> · <a href="https://www.youtube.com/watch?v=TTUGEMEy2bE" target="_blank" rel="noopener">🎬 Video guide</a> · 🛠 <b>Problems? Contact U.Tools</b> · <a class="tocopen" href="#home">📚 Table of contents</a></div></section>
 <section class="page" id="patrol-monster"><h1><span class="pic">⌖</span> trol points decide where your character moves back and forth to find monsters, and the monster filter decides which monsters to attack. Click “Smart Plan” and the helper finds a spot with lots of monsters nearby and builds the route for you.</h1><a class="back tocopen" href="#home">← Table of contents</a><h2>Where to find it</h2>
@@ -2522,11 +2519,20 @@ li { margin: var(--s2) 0; }
 <p><strong>Quick links:</strong> <a href="https://unicom.market/product/aion-2-software-hlp/" target="_blank" rel="noopener">🛒 Buy a card</a> · <a href="https://discord.gg/yYbzkcqsp2" target="_blank" rel="noopener">💬 Community &amp; support</a> · <a href="https://www.aion.onl/download/Aion2.Updater.zip?v=8b58dc7b7301ca67d0cce0e3518488ea" target="_blank" rel="noopener">⬇️ Download Aion Helper</a> · 🛠 <strong>Problems? Contact U.Tools</strong> · <a href="#home">📚 Table of contents</a></p><div class="quick"><b>Quick links:</b> <a href="https://unicom.market/product/aion-2-software-hlp/" target="_blank">🛒 Buy a card</a> · <a href="https://discord.gg/yYbzkcqsp2" target="_blank">💬 Discord</a> · <a href="https://www.aion.onl/download/Aion2.Updater.zip?v=8b58dc7b7301ca67d0cce0e3518488ea" target="_blank">⬇️ Download</a> · <a href="https://www.youtube.com/watch?v=TTUGEMEy2bE" target="_blank" rel="noopener">🎬 Video guide</a> · 🛠 <b>Problems? Contact U.Tools</b> · <a class="tocopen" href="#home">📚 Table of contents</a></div></section>
 <section class="page" id="updates"><h1><span class="pic">📰</span> Latest Updates</h1><a class="back tocopen" href="#home">← Table of contents</a><p>Stay up to date with the latest features, fixes, and improvements to Aion Helper.</p>
 <hr />
+<h2>Oct 27, 2026 (11:39 UTC+8): Stigma check, godstone socketing, Soul Imprint</h2>
+<ul>
+<li><strong>Stigma interrupt check — Krao Cave only.</strong> The loadout is verified only when queuing for Krao Cave, and for both the host and the party members. If none of the slotted stigmas has an interrupt effect, all stigmas are force-reset and re-learned / re-slotted from the build plan, so an interrupt is guaranteed for the boss. The reset costs nothing and does not affect Specialty. At no other time are stigmas reset.</li>
+<li><strong>Auto godstone socketing.</strong> Equipment that is worn, item level 45 or higher, has an empty godstone slot and is not yet socketed gets a godstone from your bag automatically. Priority is what helps most in PvE and against bosses: single-target damage &gt; damage over time (poison, bleed) &gt; area damage &gt; control effects (bosses are largely immune to control). Within the same category, grade decides: Unique &gt; Legendary &gt; Rare. One copy of a given godstone has effect — a stone already worn is not socketed again.</li>
+<li><strong>Auto Soul Imprint upgrade.</strong> Worn equipment at item level 54 or higher that has already been soul-imprinted is upgraded automatically while imprint materials are available, up to a sync rate of 100%. The highest item level is finished first, then the next tier. If materials or Kinah run out the process pauses and resumes on its own once they are replenished.</li>
+<li><strong>Order of operations.</strong> Manastone socketing, godstone socketing and Soul Imprint upgrades all run after the gear swap — and also in the background when no auto task is running (idling, gathering, dungeons).</li>
+</ul>
+<p>Update: open the Updater, it pulls the latest build automatically.</p>
+<hr />
 <h2>Oct 26, 2026 (17:28 UTC+8): Hotfix</h2>
 <ul>
 <li><strong>Draupnir dungeon flow optimized</strong> — smoother run progression.</li>
 <li><strong>Control Center fixes</strong> — resolved several reported issues.</li>
-<li><strong>Stigma reset loop fixed</strong> — if you set stigmas manually, activate the first stigma slot and include at least one interrupt skill, otherwise the AI resets them (<a href="#auto-combat">details</a>).</li>
+<li><strong>Stigma reset loop fixed</strong> — if you set stigmas manually, activate the first stigma slot and include at least one interrupt skill — the check runs when queuing Krao Cave (<a href="#auto-combat">details</a>).</li>
 <li><strong>⚠ Multi-account users:</strong> enable the <strong>one account per IP</strong> option in Control Center settings to significantly reduce ban risk.</li>
 </ul>
 <p>Update: open the Updater, it pulls the latest build automatically.</p>

@@ -1175,7 +1175,7 @@ li { margin: var(--s2) 0; }
   <li>Character switching: check <strong>"Switch to next character"</strong> at the end of the instruction list.</li>
   <li>Activity sequence: drag instructions to reorder (auto quest, Draupnir dungeon, Kina farming, gathering).</li>
   <li>Gathering duration: set min/max minutes (example shows 180–300).</li>
-  <li>Finish action: dropdown at bottom ("Close game" by default).</li>
+  <li>Finish action: dropdown at bottom. Since 30 October the default is <strong>Close game</strong> + rest until the next day, because gathering is capped by a daily count.</li>
   </ul>
 </li>
 <li><strong>"Work Schedule"</strong> menu item — where you set per-character work hours and pause days.</li>
@@ -1188,7 +1188,7 @@ li { margin: var(--s2) 0; }
 <li>Click the ⚙ <strong>Settings</strong> icon (left sidebar, bottom).</li>
 <li>Select <strong>"Daily Activities"</strong> from the left menu.</li>
 <li>Check the instructions you want (Auto quest, Kina farming, Gathering, etc.).</li>
-<li>Make sure <strong>"Switch to next character"</strong> is checked and sits at the end of the list.</li>
+<li><strong>"Switch to next character"</strong> is optional since 30 October: keep it if you want the rotation to continue, or delete it — the game then closes when the tasks are done.</li>
 <li>Set gathering duration if needed (min/max minutes).</li>
 <li>Click <strong>Save</strong>.</li>
 </ol>
@@ -2518,6 +2518,17 @@ li { margin: var(--s2) 0; }
 <hr />
 <p><strong>Quick links:</strong> <a href="https://unicom.market/product/aion-2-software-hlp/" target="_blank" rel="noopener">🛒 Buy a card</a> · <a href="https://discord.gg/yYbzkcqsp2" target="_blank" rel="noopener">💬 Community &amp; support</a> · <a href="https://www.aion.onl/download/Aion2.Updater.zip?v=8b58dc7b7301ca67d0cce0e3518488ea" target="_blank" rel="noopener">⬇️ Download Aion Helper</a> · 🛠 <strong>Problems? Contact U.Tools</strong> · <a href="#home">📚 Table of contents</a></p><div class="quick"><b>Quick links:</b> <a href="https://unicom.market/product/aion-2-software-hlp/" target="_blank">🛒 Buy a card</a> · <a href="https://discord.gg/yYbzkcqsp2" target="_blank">💬 Discord</a> · <a href="https://www.aion.onl/download/Aion2.Updater.zip?v=8b58dc7b7301ca67d0cce0e3518488ea" target="_blank">⬇️ Download</a> · <a href="https://www.youtube.com/watch?v=TTUGEMEy2bE" target="_blank" rel="noopener">🎬 Video guide</a> · 🛠 <b>Problems? Contact U.Tools</b> · <a class="tocopen" href="#home">📚 Table of contents</a></div></section>
 <section class="page" id="updates"><h1><span class="pic">📰</span> Latest Updates</h1><a class="back tocopen" href="#home">← Table of contents</a><p>Stay up to date with the latest features, fixes, and improvements to Aion Helper.</p>
+<hr />
+<h2>Oct 30, 2026 (02:48 UTC+8): Control Center changes for the gathering limit</h2>
+<p>Because gathering is now capped by a daily count, the Control Center behaves differently:</p>
+<ul>
+<li><strong>"Start gathering" after daily activities removed</strong> for all characters. On finish the helper always closes the game and puts the account into rest until it resumes the next day.</li>
+<li><strong>Character-rotation gathering template reworked.</strong></li>
+<li><strong>"Switch to next character" is now optional.</strong> The instruction can be deleted — with no such instruction the game is closed once the tasks are complete.</li>
+<li><strong>Dungeon timeout: 20 minutes.</strong> A normal party clears in 7–10 minutes, so the character now leaves the dungeon by itself after 20 minutes — whether the party wiped or is still waiting for members to gather.</li>
+<li><strong>Official subscription IP:</strong> if the assigned IP temporarily fails, a nearby working IP is reassigned automatically.</li>
+</ul>
+<p>Update: open the Updater, it pulls the latest build automatically.</p>
 <hr />
 <h2>Build 16.1 (Global): gathering limit, Hidden Cubes only</h2>
 <ul>

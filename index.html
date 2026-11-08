@@ -1134,29 +1134,35 @@ li { margin: var(--s2) 0; }
 <p><strong>Quick links:</strong> <a href="https://unicom.market/product/aion-2-software-hlp/" target="_blank" rel="noopener">🛒 Buy a card</a> · <a href="https://discord.gg/yYbzkcqsp2" target="_blank" rel="noopener">💬 Community &amp; support</a> · <a href="https://www.aion.onl/download/Aion2.Updater.zip?v=8b58dc7b7301ca67d0cce0e3518488ea" target="_blank" rel="noopener">⬇️ Download Aion Helper</a> · 🛠 <strong>Problems? Contact U.Tools</strong> · <a href="#home">📚 Table of contents</a></p><div class="quick"><b>Quick links:</b> <a href="https://unicom.market/product/aion-2-software-hlp/" target="_blank">🛒 Buy a card</a> · <a href="https://discord.gg/yYbzkcqsp2" target="_blank">💬 Discord</a> · <a href="https://www.aion.onl/download/Aion2.Updater.zip?v=8b58dc7b7301ca67d0cce0e3518488ea" target="_blank">⬇️ Download</a> · <a href="https://www.youtube.com/watch?v=TTUGEMEy2bE" target="_blank" rel="noopener">🎬 Video guide</a> · 🛠 <b>Problems? Contact U.Tools</b> · <a class="tocopen" href="#home">📚 Table of contents</a></div>
 <h2>Pet farming — scope, limits and why it stops</h2>
 
-<p>Pet farming is an open-world feature. It is <strong>not designed for the Abyss</strong>. In the Abyss the helper runs auto-combat and gathering instead, so a character set to farm pets there is running two different modes against the wrong map.</p>
+<p>Pet farming is an open-world feature. It is <b>not available on the Abyss map</b>: the helper does not automatically look for pets there, so the pet auto-farm option simply is not offered. In the Abyss the helper runs auto-combat and gathering instead.</p>
 
 <h3>What pet farming skips</h3>
-<p>Two filters are applied to the target list by design:</p>
+<p>Pet Farm cannot farm every pet — three kinds are skipped by design:</p>
 <ul>
-<li><strong>Airborne monsters</strong> are excluded entirely.</li>
-<li><strong>Elite monsters and bosses</strong> are excluded. If a pet's target happens to be a boss, it is skipped rather than attempted, to avoid repeated deaths.</li>
+<li><b>Aerial pets</b> are skipped entirely.</li>
+<li><b>Boss-type pets</b> are skipped, to avoid repeated deaths.</li>
+<li><b>Pets that are not on the current map</b> are skipped — the helper does not travel to another map to hunt them.</li>
 </ul>
 
 <h3>Why the character stops after one or two kills</h3>
-<p>This is <strong>expected behaviour</strong>, not a hang. Once the pet list for the map is empty, pet farming ends and the helper reverts to the default combat idle mode. In the Abyss most beasts are airborne and therefore filtered out, so the list empties almost immediately — the character kills the few valid ground targets and then has nothing left to do.</p>
+<p>This is <b>expected behaviour</b>, not a hang. Once no valid pet is left on the map, pet farming ends and the helper reverts to the default combat idle mode. On a map where most beasts are aerial, the pool empties within a couple of kills.</p>
+
+<h3>How to set it up</h3>
+<ol>
+<li><b>Move the character to the farming spot manually.</b> Pet farming does not search other maps for pets, so you have to be standing where the pets are.</li>
+<li><b>Turn on patrol mode.</b> With a patrol route the character walks the area and picks up pets along the way instead of stopping after the first few kills.</li>
+<li><b>Stay on an open-world map</b> — on the Abyss the pet auto-farm option is not available at all.</li>
+</ol>
 
 <h3>Recommended setup</h3>
 <ul>
-<li><strong>Abyss:</strong> use auto-combat with a patrol route. The auto-planning button builds a route from the character's current position and filters, so waypoints do not need to be added by hand.</li>
-<li><strong>Pets:</strong> farm them on the open-world map, where the target pool is not stripped by the airborne and elite filters.</li>
-<li><strong>Mixed routine:</strong> the helper already orders these stages — Abyss first, then pet farming, then open-world floor gold, then gathering if enabled.</li>
+<li><b>Abyss:</b> use auto-combat with a patrol route. The auto-planning button builds a route from the character's current position and filters, so waypoints do not need to be added by hand.</li>
+<li><b>Pets:</b> open-world map only, character moved into place by hand, patrol mode enabled.</li>
+<li><b>Mixed routine:</b> the helper already orders these stages — Abyss first, then pet farming, then open-world floor gold, then gathering if enabled.</li>
 </ul>
 
 <h3>First thing to check if the character stands still</h3>
 <p>Confirm the right-click custom skill slot is not empty. Default combat with no macro assigned produces the same result as a frozen client — the character stays put and casts nothing.</p>
-
-<hr>
 
 <h2>How to program character switching and schedule</h2>
 
